@@ -36,7 +36,7 @@ function atualizarLista() {
     li.textContent = nome;
 
     const botaoRemover = document.createElement("button");
-    botaoRemover.textContent = "Remover";
+    botaoRemover.innerHTML = '<i class="fas fa-trash"></i>';
     botaoRemover.className = "button-remove";
     botaoRemover.onclick = () => removerAmigo(index);
 

@@ -167,15 +167,24 @@ ul {
 .button-remove {
   background-color: #dc3545;
   color: var(--color-white);
-  padding: 5px 12px;
-  font-size: 14px;
+  padding: 8px 12px;
+  font-size: 16px;
   border-radius: 15px;
   margin-left: 15px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
 }
 
 .button-remove:hover {
   background-color: #c82333;
+}
+
+.button-remove i {
+  font-size: 14px;
 }
 
 /* Botão de sortear título */
