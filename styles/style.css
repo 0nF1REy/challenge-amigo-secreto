@@ -152,12 +152,30 @@ ul {
   margin: 20px 0;
 }
 
-.result-list {
-  margin-top: 15px;
-  color: #05df05;
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
+.name-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 5px 0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-tertiary);
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-remove {
+  background-color: #dc3545;
+  color: var(--color-white);
+  padding: 5px 12px;
+  font-size: 14px;
+  border-radius: 15px;
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+
+.button-remove:hover {
+  background-color: #c82333;
 }
 
 /* Botão de sortear título */
