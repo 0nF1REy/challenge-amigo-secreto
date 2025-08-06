@@ -21,6 +21,7 @@ function adicionarAmigo() {
   input.value = "";
 
   atualizarLista();
+  atualizarBotaoSortear();
 }
 
 /* Atualiza a lista exibida de amigos */
@@ -46,10 +47,17 @@ function atualizarLista() {
 function removerAmigo(index) {
   amigos.splice(index, 1);
   atualizarLista();
+  atualizarBotaoSortear();
 
   if (amigos.length === 0) {
     document.getElementById("resultado").innerHTML = "";
   }
+}
+
+/* Atualiza o estado do botão de sortear */
+function atualizarBotaoSortear() {
+  const botaoSortear = document.querySelector(".button-draw");
+  botaoSortear.disabled = amigos.length === 0;
 }
 
 /* Realiza o sorteio aleatório de um amigo */
@@ -78,4 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
       adicionarAmigo();
     }
   });
+
+  atualizarBotaoSortear();
 });
