@@ -13,6 +13,7 @@ function adicionarAmigo() {
   if (amigos.includes(nome)) {
     alert("Este nome já foi adicionado!");
     input.value = "";
+    atualizarBotaoAdicionar();
     return;
   }
 
@@ -22,6 +23,7 @@ function adicionarAmigo() {
 
   atualizarLista();
   atualizarBotaoSortear();
+  atualizarBotaoAdicionar();
 }
 
 /* Atualiza a lista exibida de amigos */
@@ -60,6 +62,13 @@ function atualizarBotaoSortear() {
   botaoSortear.disabled = amigos.length === 0;
 }
 
+/* Atualiza o estado do botão de adicionar */
+function atualizarBotaoAdicionar() {
+  const input = document.getElementById("amigo");
+  const botaoAdicionar = document.querySelector(".button-add");
+  botaoAdicionar.disabled = input.value.trim() === "";
+}
+
 /* Realiza o sorteio aleatório de um amigo */
 function sortearAmigo() {
   const resultado = document.getElementById("resultado");
@@ -81,11 +90,17 @@ function sortearAmigo() {
 
 document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("amigo");
+
   input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       adicionarAmigo();
     }
   });
 
+  input.addEventListener("input", function () {
+    atualizarBotaoAdicionar();
+  });
+
   atualizarBotaoSortear();
+  atualizarBotaoAdicionar();
 });

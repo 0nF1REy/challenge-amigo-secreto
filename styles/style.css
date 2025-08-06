@@ -116,13 +116,31 @@ button {
 }
 
 .button-add {
-  background-color: var(--color-tertiary);
-  color: var(--color-text);
+  background-color: var(--color-button);
+  color: var(--color-white);
   border-radius: 0 25px 25px 0;
+  font-size: 16px;
 }
 
 .button-add:hover {
+  background-color: var(--color-button-hover);
+}
+
+.button-add:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
   background-color: #a1a1a1;
+  color: #212121;
+  border-color: #272727;
+  pointer-events: none;
+}
+
+.button-add:disabled:hover {
+  background-color: #a1a1a1;
+  color: #212121;
+  transform: none;
+  box-shadow: none;
+  border-color: #272727;
 }
 
 /* Listas */
