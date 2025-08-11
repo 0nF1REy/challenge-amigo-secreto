@@ -7,6 +7,8 @@
 ![Maintenance](https://img.shields.io/maintenance/yes/2025?style=for-the-badge)
 ![License MIT](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
 
+ <img src="./readme_images/badge-one.png" height="300" alt="Badge do Oracle Next Education">
+       
 </div>
 
 ## 📖 Descrição
